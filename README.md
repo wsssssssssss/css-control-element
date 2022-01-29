@@ -1,8 +1,8 @@
-HTML + CSS로 UI Component들을 구현해보자
-🙃 미션
+# HTML + CSS로 UI 기술들을 구현해보자
+## 🙃 미션
 UI Component로 많이 쓰이는 기술들을 css로 구현해보자
 
-## 2. 기능
+## 기능들
 
 ### Accodion
 각 Accodion Item을 클릭하면 Item에 해당하는 내용이 표시된다.
