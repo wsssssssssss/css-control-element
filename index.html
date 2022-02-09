@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/font-awesome.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>CSS</title>
 </head>
@@ -11,50 +12,205 @@
   <div>
     <fieldset>
       <legend>Accodion</legend>
-      <div>
+      
+      <div class="accodion">
         <!-- 여기에 html -->
+        <input type="radio" name="rad" id="accRad1">
+        <input type="radio" name="rad" id="accRad2">
+        <input type="radio" name="rad" id="accRad3">
+        <ul>
+          <li class="menu1">
+            <label for="accRad1">
+              <div class="title flex">
+                <h3>Accordion Item #1</h3>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </label>
+            <div class="content flex">
+              <p><span class="action">This is first item's accordion body.</span> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS tranditions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <span class="purple">.accordion-body</span>, though the trandition does limit overflow. </p>
+            </div>
+          </li>
+          <li class="menu2">
+            <label for="accRad2">
+              <div class="title flex">
+                <h3>Accordion Item #2</h3>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </label>
+            <div class="content flex">
+              <p><span class="action">This is second item's accordion body.</span> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS tranditions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <span class="purple">.accordion-body</span>, though the trandition does limit overflow. </p>
+            </div>
+          </li>
+          <li class="menu3">
+            <label for="accRad3">
+              <div class="title flex">
+                <h3>Accordion Item #3</h3>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </label>
+            <div class="content flex">
+              <p><span class="action">This is third item's accordion body.</span> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS tranditions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <span class="purple">.accordion-body</span>, though the trandition does limit overflow. </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </fieldset>
   </div>
+
   <div>
     <fieldset>
       <legend>Slide</legend>
-      <div>
+      <div class="slide">
         <!-- 여기에 html -->
+        <input type="radio" name="sldrad" id="start" checked>
+        <input type="radio" name="sldrad" id="sldrad1L">
+        <input type="radio" name="sldrad" id="sldrad2L">
+        <input type="radio" name="sldrad" id="sldrad3L">
+        <input type="radio" name="sldrad" id="sldrad1R">
+        <input type="radio" name="sldrad" id="sldrad2R">
+        <input type="radio" name="sldrad" id="sldrad3R">
+
+        <ul class="flex">
+          <li class="slide3 flex">
+            <h3 class="slide_title">Third slide</h3>
+          </li>
+          <li class="slide1 flex">
+            <h3 class="slide_title">First slide</h3>
+          </li>
+          <li class="slide2 flex">
+            <h3 class="slide_title">Second slide</h3>
+          </li>
+          <li class="slide3 flex">
+            <h3 class="slide_title">Third slide</h3>
+          </li>
+          <li class="slide1 flex">
+            <h3 class="slide_title">First slide</h3>
+          </li>
+        </ul>
+        <div class="btns flex">
+          <div class="left">
+            <label for="sldrad1L" class="sldrad1L none"><i class="fa fa-chevron-left"></i></label>
+            <label for="sldrad2L" class="sldrad2L none"><i class="fa fa-chevron-left"></i></label>
+            <label for="sldrad3L" class="sldrad3L none"><i class="fa fa-chevron-left"></i></label>
+          </div>
+          <div class="right">
+            <label for="sldrad1R" class="sldrad1R none"><i class="fa fa-chevron-right"></i></label>
+            <label for="sldrad2R" class="sldrad2R none"><i class="fa fa-chevron-right"></i></label>
+            <label for="sldrad3R" class="sldrad3R none"><i class="fa fa-chevron-right"></i></label>
+          </div>
+        </div>
+        <div class="bars flex">
+          <div class="bar1 bar"></div>
+          <div class="bar2 bar"></div>
+          <div class="bar3 bar"></div>
+        </div>
       </div>
     </fieldset>
   </div>
+
   <div>
     <fieldset>
       <legend>Slide (fade)</legend>
-      <div>
+      <div class="slidef">
         <!-- 여기에 html -->
+        <input type="radio" name="sldfrad" id="sldfrad1" checked>
+        <input type="radio" name="sldfrad" id="sldfrad2">
+        <input type="radio" name="sldfrad" id="sldfrad3">
+        <ul class="flex">
+          <li class="slide1 flex">
+            <h3 class="slide_title">First slide</h3>
+          </li>
+          <li class="slide2 flex">
+            <h3 class="slide_title">Second slide</h3>
+          </li>
+          <li class="slide3 flex">
+            <h3 class="slide_title">Third slide</h3>
+          </li>
+        </ul>
+        <div class="btns flex">
+          <div class="left">
+            <label for="sldfrad1" class="sldfrad1 none"><i class="fa fa-chevron-left"></i></label>
+            <label for="sldfrad2" class="sldfrad2 none"><i class="fa fa-chevron-left"></i></label>
+            <label for="sldfrad3" class="sldfrad3 none"><i class="fa fa-chevron-left"></i></label>
+          </div>
+          <div class="right">
+            <label for="sldfrad1" class="sldfrad1 none"><i class="fa fa-chevron-right"></i></label>
+            <label for="sldfrad2" class="sldfrad2 none"><i class="fa fa-chevron-right"></i></label>
+            <label for="sldfrad3" class="sldfrad3 none"><i class="fa fa-chevron-right"></i></label>
+          </div>
+        </div>
+        <div class="bars flex">
+          <div class="bar1 bar"></div>
+          <div class="bar2 bar"></div>
+          <div class="bar3 bar"></div>
+        </div>
       </div>
     </fieldset>
   </div>
+
   <div>
     <fieldset>
       <legend>Collapse</legend>
-      <div>
+      <div class="collapse">
         <!-- 여기에 html -->
+        <input type="checkbox" id="colchk">
+        <label for="colchk">Link with href</label>
+
+        <div class="content">
+          <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trgger.</p>
+        </div>
       </div>
     </fieldset>
   </div>
+
   <div>
     <fieldset>
       <legend>Dropdown</legend>
-      <div>
+      <div class="dropdown">
         <!-- 여기에 html -->
+        <input type="checkbox" id="drpchk">
+        <label for="drpchk">
+          <div class="title flex">
+            <h4>Dropdown link</h4>
+            <i class="fa fa-caret-down"></i>
+          </div>
+
+          <ul class="menu flex">
+            <li>Action</li>
+            <li>Another action</li>
+            <li>Something else here</li>
+          </ul>
+        </label>
+
+
       </div>
     </fieldset>
   </div>
+
   <div>
     <fieldset>
       <legend>Popup</legend>
-      <div>
+      <div class="popup">
+        <input type="checkbox" id="popchk">
+        <label for="popchk" class="pop_btn">Launch demo modal</label>
+
         <!-- 여기에 html -->
+        <label for="popchk" class="popup_background"></label>
+        <div class="popup_content">
+          <div class="title flex">
+            <h3>Modal title</h3>
+            <div class="close">x</div>
+          </div>
+          <div class="content">
+            <p>Woohoo, you're reading this text in a modal!</p>
+          </div>
+          <div class="btns flex">
+            <label for="popchk" class="close_btn">Close</label>
+            <button class="save_btn">Save Changes</button>
+          </div>
+        </div>
       </div>
-    </fieldset>
+      </fieldset>
   </div>
 </body>
 </html>

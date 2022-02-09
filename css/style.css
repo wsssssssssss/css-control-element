@@ -1,1 +1,227 @@
+*{margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+.flex{display: flex;}
+.grid{display: grid;}
+.none{display: none;}
+
 body > div + div { margin-top: 50px; padding-top: 50px; border-top: 1px solid #ddd; }
+body{padding: 10px; background: #fff;}
+fieldset{padding: 10px;}
+
+/* accodion */
+.accodion{width: 50%; border: 1px solid #000; border-radius: 5px; padding: 20px; margin: 0 auto;}
+.accodion ul{border: 1px solid #333; margin: 0 auto; border-radius: 5px;}
+.accodion ul>li{width: 100%; height: 100%; border-bottom: 1px  solid #333;}
+.accodion ul>li:last-child{border: none;}
+.accodion .title{justify-content: space-between; align-items: center; font-size: 22px; padding: 0 30px; cursor: pointer; transition: .3s;}
+.accodion .title i{width: 70px; height: 70px; line-height: 70px; text-align: center; font-size: 25px; transition: .3s;}
+
+.accodion .content{align-items: center; height: 0; overflow: hidden; font-weight: 500; font-size: 20px; transition: .3s;}
+.accodion .content p{height: 230px; padding: 30px; border-top: 1px  solid #333;}
+.accodion .content .action{font-weight: bold;}
+.accodion .content .purple{color: purple; font-weight: 600;}
+
+.accodion input{display: none;}
+.accodion #accRad1:checked~ ul .menu1 .content,
+.accodion #accRad2:checked~ ul .menu2 .content,
+.accodion #accRad3:checked~ ul .menu3 .content{height: 230px; transition: .3s;}
+
+.accodion #accRad1:checked~ ul .menu1 .title,
+.accodion #accRad2:checked~ ul .menu2 .title,
+.accodion #accRad3:checked~ ul .menu3 .title{background: rgb(228, 238, 254); color: rgb(65, 118, 210); transition: .3s;}
+
+.accodion #accRad1:checked~ ul .menu1 .title i,
+.accodion #accRad2:checked~ ul .menu2 .title i,
+.accodion #accRad3:checked~ ul .menu3 .title i{transform: rotate(180deg); transition: .3s;}
+
+
+/* slide */
+.slide{position: relative; width: 60%; height: 600px; margin: 30px auto; background: #333; overflow: hidden;}
+.slide input{display: none;}
+.slide ul{width: 500%; height: 100%;}
+.slide ul>li{flex: 1; justify-content: center; align-items: center; line-height: 100vh;}
+.slide ul>.slide1{background: rgb(108, 108, 108);}
+.slide ul>.slide2{background: rgb(91, 91, 91);}
+.slide ul>.slide3{background: rgb(74, 74, 74);}
+.slide ul>li h3{font-size: 65px; color: #333;}
+
+.slide .btns{position: absolute; width: 100%; height: 100%; justify-content: space-between; align-items: center; left: 0; top: 0; z-index: 1; color: #fff;}
+.slide .btns i{margin: 0 50px; padding: 35px; font-size: 50px; cursor: pointer;}
+
+.slide .bars{position: absolute; width: 100%; height: 100%; left: 0; top: 0; justify-content: center; align-items: flex-end; gap: 10px;}
+.slide .bars .bar{width: 80px; height: 5px; background: rgb(121, 121, 121); margin-bottom: 100px; transition: .3s;}
+
+.slide #start:checked~ .btns .left .sldrad3L{display: block;}
+.slide #start:checked~ .btns .right .sldrad2R{display: block;}
+.slide #start:checked~ ul{margin-left: -100%;}
+.slide #start:checked~ .bars .bar1{background: #eee; transition: .3s;}
+
+
+
+.slide #sldrad1L:checked~ .btns .left .sldrad3L{display: block;}
+.slide #sldrad1L:checked~ .btns .right .sldrad2R{display: block;}
+.slide #sldrad1L:checked~ ul{animation: slide1L .5s forwards;}
+.slide #sldrad1L:checked~ .bars .bar1{background: #eee; transition: .3s;}
+
+.slide #sldrad2L:checked~ .btns .left .sldrad1L{display: block;}
+.slide #sldrad2L:checked~ .btns .right .sldrad3R{display: block;}
+.slide #sldrad2L:checked~ ul{animation: slide2L .5s forwards;}
+.slide #sldrad2L:checked~ .bars .bar2{background: #eee; transition: .3s;}
+
+.slide #sldrad3L:checked~ .btns .left .sldrad2L{display: block;}
+.slide #sldrad3L:checked~ .btns .right .sldrad1R{display: block;}
+.slide #sldrad3L:checked~ ul{animation: slide3L .5s forwards;}
+.slide #sldrad3L:checked~ .bars .bar3{background: #eee; transition: .3s;}
+
+
+.slide #sldrad1R:checked~ .btns .left .sldrad3L{display: block;}
+.slide #sldrad1R:checked~ .btns .right .sldrad2R{display: block;}
+.slide #sldrad1R:checked~ ul{animation: slide1R .5s forwards;}
+.slide #sldrad1R:checked~ .bars .bar1{background: #eee; transition: .3s;}
+
+.slide #sldrad2R:checked~ .btns .left .sldrad1L{display: block;}
+.slide #sldrad2R:checked~ .btns .right .sldrad3R{display: block;}
+.slide #sldrad2R:checked~ ul{animation: slide2R .5s forwards;}
+.slide #sldrad2R:checked~ .bars .bar2{background: #eee; transition: .3s;}
+
+.slide #sldrad3R:checked~ .btns .left .sldrad2L{display: block;}
+.slide #sldrad3R:checked~ .btns .right .sldrad1R{display: block;}
+.slide #sldrad3R:checked~ ul{animation: slide3R .5s forwards;}
+.slide #sldrad3R:checked~ .bars .bar3{background: #eee; transition: .3s;}
+
+
+
+@keyframes slide1L{
+    0%{margin-left: -200%;}
+    99.99999%{margin-left: -100%;}
+    100%{margin-left: -400%;}
+}
+
+@keyframes slide2L{
+    0%{margin-left: -300%;}
+    100%{margin-left: -200%;}
+}
+
+@keyframes slide3L{
+    0%{margin-left: -100%;}
+    99.99999%{margin-left: -0%;}
+    100%{margin-left: -300%;}
+}
+
+@keyframes slide1R{
+    0%{margin-left: -300%;}
+    99.99999%{margin-left: -400%;}
+    100%{margin-left: -100%;}
+}
+
+@keyframes slide2R{
+    0%{margin-left: -100%;}
+    99.99999%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+
+@keyframes slide3R{
+    0%{margin-left: -200%;}
+    99.99999%{margin-left: -300%;}
+    100%{margin-left: -0%;}
+}
+
+
+
+
+/* slide(fade) */
+.slidef{position: relative; width: 60%; height: 600px; margin: 30px auto; background: #333; overflow: hidden;}
+.slidef input{display: none;}
+.slidef ul{width: 300%; height: 100%;}
+.slidef ul>li{flex: 1; justify-content: center; align-items: center; line-height: 100vh; transition: 1s;}
+.slidef ul>.slide1{background: rgb(108, 108, 108);}
+.slidef ul>.slide2{background: rgb(91, 91, 91);}
+.slidef ul>.slide3{background: rgb(74, 74, 74);}
+.slidef ul>li h3{font-size: 65px; color: #333;}
+
+.slidef .btns{position: absolute; width: 100%; height: 100%; justify-content: space-between; align-items: center; left: 0; top: 0; z-index: 1; color: #fff;}
+.slidef .btns i{margin: 0 50px; padding: 35px; font-size: 50px; cursor: pointer;}
+
+.slidef .bars{position: absolute; width: 100%; height: 100%; left: 0; top: 0; justify-content: center; align-items: flex-end; gap: 10px;}
+.slidef .bars .bar{width: 80px; height: 5px; background: rgb(121, 121, 121); margin-bottom: 100px; transition: .3s;}
+
+
+.slidef #sldfrad1:checked~ .btns .left .sldfrad3{display: block;}
+.slidef #sldfrad1:checked~ .btns .right .sldfrad2{display: block;}
+.slidef #sldfrad1:checked~ ul{margin-left: -0%;}
+.slidef #sldfrad1:checked~ ul .slide1{opacity: 1; transition: 1s;}
+.slidef #sldfrad1:checked~ ul .slide2{opacity: 0; transition: 1s;}
+.slidef #sldfrad1:checked~ ul .slide3{opacity: 0; transition: 1s;}
+.slidef #sldfrad1:checked~ .bars .bar1{background: #eee; transition: .3s;}
+
+.slidef #sldfrad2:checked~ .btns .left .sldfrad1{display: block;}
+.slidef #sldfrad2:checked~ .btns .right .sldfrad3{display: block;}
+.slidef #sldfrad2:checked~ ul{margin-left: -100%;}
+.slidef #sldfrad2:checked~ ul .slide1{opacity: 0; transition: 1s;}
+.slidef #sldfrad2:checked~ ul .slide2{opacity: 1; transition: 1s;}
+.slidef #sldfrad2:checked~ ul .slide3{opacity: 0; transition: 1s;}
+.slidef #sldfrad2:checked~ .bars .bar2{background: #eee; transition: .3s;}
+
+.slidef #sldfrad3:checked~ .btns .left .sldfrad2{display: block;}
+.slidef #sldfrad3:checked~ .btns .right .sldfrad1{display: block;}
+.slidef #sldfrad3:checked~ ul{margin-left: -200%;}
+.slidef #sldfrad3:checked~ ul .slide1{opacity: 0; transition: 1s;}
+.slidef #sldfrad3:checked~ ul .slide2{opacity: 0; transition: 1s;}
+.slidef #sldfrad3:checked~ ul .slide3{opacity: 1; transition: 1s;}
+.slidef #sldfrad3:checked~ .bars .bar3{background: #eee; transition: .3s;}
+
+
+
+/* collapse */
+.collapse{width: 40%; margin: 0 auto; padding: 10px;}
+.collapse input{display: none;}
+.collapse label{display: inline-block; padding: 10px 15px; background: rgb(16, 98, 254); color: #fff; border-radius: 5px; cursor: pointer;}
+
+.collapse .content{height: 0; overflow: hidden; margin-top: 20px; transition: .5s;}
+.collapse .content p{border: 1px solid #ddd; margin: 20px; padding: 10px; border-radius: 10px;}
+
+.collapse #colchk:checked~ .content{height: 130px; transition: .5s;}
+
+
+
+/* dropdown */
+.dropdown{width: 40%; margin: 0 auto; padding: 10px;}
+.dropdown input{display: none;}
+.dropdown label{position: relative; display: inline-block; padding: 10px 15px; background: rgb(98, 106, 114); color: #fff; border-radius: 5px; cursor: pointer;}
+.dropdown .title{width: 100%; height: 100%; justify-content: center; align-items: center;}
+.dropdown .title i{width: 30px; height: 30px; line-height: 30px; text-align: center; font-size: 20px;}
+
+
+.dropdown .menu{position: absolute; display: none; width: 200px; line-height: 50px; padding: 5px 0; left: 0; top: 100%; flex-direction: column; background: #fff; color: #333; border: 1px solid #333; border-radius: 5px; z-index: 1;}
+.dropdown .menu li{padding: 0 10px; font-weight: bold; cursor: pointer; transition: .3s;}
+.dropdown .menu li:hover{background: rgba(0, 0, 0, .1); transition: .3s;}
+
+.dropdown #drpchk:checked~ label .menu{display: block;}
+.dropdown #drpchk:checked~ label{background: rgb(83, 88, 97); box-shadow: 0 0 0 4px rgba(0, 0, 0, .4);}
+
+
+/* popup */
+.popup{width: 40%; margin: 0 auto; padding: 10px;}
+.popup input{display: none;}
+.popup .pop_btn{display: inline-block; padding: 10px; background: rgb(16, 98, 254); color: #fff; border-radius: 5px; cursor: pointer;}
+
+.popup_background{position: fixed; opacity: 0; justify-content: center; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .6); transition: .3s; z-index: -11;}
+.popup_content{position: fixed; width: 600px; height: 250px; left: 50%; top: 0; margin-top: -1000px; border-radius: 10px; transform: translateX(-50%); background: #fff; transition: .5s; z-index: 20;}
+.popup_content .title{line-height: 70px; padding: 5px 20px; justify-content: space-between;}
+.popup_content .title h3{font-size: 25px;}
+.popup_content .title .close{font-weight: bold; font-size: 35px;}
+.popup_content .content{border: 1px solid #333; padding: 20px 20px 50px 20px; border-left: none; border-right: none;}
+.popup_content .btns{width: 100%; padding: 20px 40px; justify-content: flex-end; gap: 20px;}
+.popup_content .btns>*{padding: 10px 15px; color: #fff; font-size: 17px; font-weight: bold; background: none; border: none; border-radius: 5px; outline: none; cursor: pointer;}
+
+.popup_content .btns .close_btn{background: rgb(98, 106, 113);}
+.popup_content .btns .save_btn{background: rgb(16, 98, 254);}
+
+
+.popup #popchk:checked~ .popup_background{opacity: 1; z-index: 10;}
+.popup #popchk:checked~ .popup_content{margin-top: 20px; transition: .5s;}
+
+
+

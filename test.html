@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ddd{ width: 500px; height: 500px; background: red; }
+        #box:checked ~ .ddd{
+            animation-fill-mode: forwards;
+            animation-name: a,o;
+            animation-delay: 0s,0s;
+            animation-duration: 1s,1s;
+            animation-timing-function: linear;
+        }
+        #box1:checked ~ .ddd{
+            animation-fill-mode: forwards;
+            animation-name: b,o;
+            animation-delay: 0s,0s;
+            animation-duration: 1s,1s;
+            animation-timing-function: linear, linear;
+        }
+        @keyframes a{
+            0%{ margin-left: 0px; }
+            100%{ margin-left: 100px; }
+        }
+        @keyframes b{
+            0%{ margin-left: 0px }
+            100%{ margin-left: 100px; }
+        }
+        @keyframes o {
+            0%{ opacity: 1; }
+            50%{ opacity: 0; }
+            100%{ opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="box">
+    <input type="checkbox" id="box1">
+    <label for="box">box</label>
+    <label for="box1">box1</label>
+    <div class="ddd"></div>
+</body>
+</html>
