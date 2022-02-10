@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,44 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>CSS</title>
 </head>
+
 <body>
   <div>
     <fieldset>
       <legend>Accodion</legend>
       <div>
         <!-- 여기에 html -->
+        <!-- <input type="checkbox" id="box1">
+        <input type="checkbox" id="box2">
+        <input type="checkbox" id="box3"> -->
+        <input type="radio" id="box1" name="accodion">
+        <input type="radio" id="box2" name="accodion">
+        <input type="radio" id="box3" name="accodion">
+       
+        <label for="box1" class="item1">Accordion Item #1<span>^</span></label>
+        <div class="content1">
+          <span>This is the first item's accordion boxy.</span> It is shown by default, until the collapse plugin adds<br>
+          the appropriate classes that we use to style each element. These classes control the overall<br>
+          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
+          custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
+          can go within the <span>.accordion-body</span>, though the transition does limit overflow.
+        </div>
+        <label for="box2" class="item2">Accordion Item #2<span>^</span></label>
+        <div class="content2">
+          <span>This is the second item's accordion boxy.</span> It is hidden by default, until the collapse plugin adds<br>
+          the appropriate classes that we use to style each element. These classes control the overall<br>
+          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
+          custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
+          can go within the <span>.accordion-body</span>, though the transition does limit overflow.
+        </div>
+        <label for="box3" class="item3">Accordion Item #3<span>^</span></label>
+        <div class="content3">
+          <span>This is the third item's accordion boxy.</span> It is hidden by default, until the collapse plugin adds<br>
+          the appropriate classes that we use to style each element. These classes control the overall<br>
+          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
+          custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
+          can go within the <span>.accordion-body</span>, though the transition does limit overflow.
+        </div>
       </div>
     </fieldset>
   </div>
@@ -21,6 +54,45 @@
       <legend>Slide</legend>
       <div>
         <!-- 여기에 html -->
+        <input type="radio" name="slide" id="slide0">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <div class="slide">
+          <ul>
+            <li class="slide0">
+              <label for="" class="prev prev0">&#60;</label>
+              Third slide
+              <label for="" class="next next0">&#62;</label>
+            </li>
+            <li class="slide1">
+              <label for="slide0" class="prev prev1">&#60;</label>
+              First slide
+              <label for="slide2" class="next next1">&#62;</label>
+            </li>
+            <li class="slide2">
+              <label for="slide1" class="prev prev2">&#60;</label>
+              Second slide
+              <label for="slide3" class="next next2">&#62;</label>
+            </li>
+            <li class="slide3">
+              <label for="slide2" class="prev prev3">&#60;</label>
+              Third slide
+              <label for="slide4" class="next next3">&#62;</label>
+            </li>
+            <li class="slide4">
+              <label for="" class="prev prev4">&#60;</label>
+              First slide
+              <label for="" class="next next4">&#62;</label>
+            </li>
+          </ul>
+          <nav>
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+          </nav>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -29,6 +101,28 @@
       <legend>Slide (fade)</legend>
       <div>
         <!-- 여기에 html -->
+        <input type="radio" name="slideF" id="slideF1" checked>
+        <input type="radio" name="slideF" id="slideF2">
+        <input type="radio" name="slideF" id="slideF3">
+        <div class="slideF">
+          <ul>
+            <li class="slideF1">
+              <label for="slideF3" class="prevF prevF1">&#60;</label>
+              First slide
+              <label for="slideF2" class="nextF nextF1">&#62;</label>
+            </li>
+            <li class="slideF2">
+              <label for="slideF1" class="prevF prevF2">&#60;</label>
+              Second slide
+              <label for="slideF3" class="nextF nextF2">&#62;</label>
+            </li>
+            <li class="slideF3">
+              <label for="slideF2" class="prevF prevF3">&#60;</label>
+              Third slide
+              <label for="slideF1" class="nextF nextF3">&#62;</label>
+            </li>
+          </ul>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -57,4 +151,5 @@
     </fieldset>
   </div>
 </body>
+
 </html>
