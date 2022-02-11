@@ -21,10 +21,11 @@
         <input type="radio" id="box1" name="accodion">
         <input type="radio" id="box2" name="accodion">
         <input type="radio" id="box3" name="accodion">
-       
+
         <label for="box1" class="item1">Accordion Item #1<span>^</span></label>
         <div class="content1">
-          <span>This is the first item's accordion boxy.</span> It is shown by default, until the collapse plugin adds<br>
+          <span>This is the first item's accordion boxy.</span> It is shown by default, until the collapse plugin
+          adds<br>
           the appropriate classes that we use to style each element. These classes control the overall<br>
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
           custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
@@ -32,7 +33,8 @@
         </div>
         <label for="box2" class="item2">Accordion Item #2<span>^</span></label>
         <div class="content2">
-          <span>This is the second item's accordion boxy.</span> It is hidden by default, until the collapse plugin adds<br>
+          <span>This is the second item's accordion boxy.</span> It is hidden by default, until the collapse plugin
+          adds<br>
           the appropriate classes that we use to style each element. These classes control the overall<br>
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
           custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
@@ -40,7 +42,8 @@
         </div>
         <label for="box3" class="item3">Accordion Item #3<span>^</span></label>
         <div class="content3">
-          <span>This is the third item's accordion boxy.</span> It is hidden by default, until the collapse plugin adds<br>
+          <span>This is the third item's accordion boxy.</span> It is hidden by default, until the collapse plugin
+          adds<br>
           the appropriate classes that we use to style each element. These classes control the overall<br>
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with<br>
           custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
@@ -131,6 +134,14 @@
       <legend>Collapse</legend>
       <div>
         <!-- 여기에 html -->
+        <div class="boxC">
+          <input type="checkbox" id="toggleBtn">
+          <label for="toggleBtn" class="collapseBtn">Link with href</label>
+          <div class="collapseBox">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed<br>
+            when the user activates the relevant trigger.
+          </div>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -139,6 +150,15 @@
       <legend>Dropdown</legend>
       <div>
         <!-- 여기에 html -->
+        <div class="boxD">
+          <input type="checkbox" id="btnD">
+          <label for="btnD" class="dropBtn">dropdown link</label>
+          <ul class="subManu">
+            <li>Action</li>
+            <li>Another action</li>
+            <li>Something else here</li>
+          </ul>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -147,6 +167,25 @@
       <legend>Popup</legend>
       <div>
         <!-- 여기에 html -->
+        <div class="boxP">
+          <input type="checkbox" id="btnP">
+          <input type="checkbox" id="closeBtn">
+          <input type="checkbox" id="close">
+          <input type="checkbox" id="save">
+          <label for="btnP" class="btnP">Launch demo modal</label>
+        </div>
+        <div class="fixed">
+          <div class="modal">
+            <div class="title">Modal title<label for="closeBtn" class="closeBtn">X</label></div>
+            <div class="line">
+              <div class="contentP">Woohoo, you're reading his text in a modal!</div>
+            </div>
+            <div class="flexBtn">
+              <label for="close" class="close">Close</label>
+              <label for="save" class="save">Save changes</label>
+            </div>
+          </div>
+        </div>
       </div>
     </fieldset>
   </div>
