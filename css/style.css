@@ -387,10 +387,10 @@ nav {
 .subManu > li {
     line-height: 30px;
 }
-#btn:checked ~ .dropBtn {
+#btnD:checked ~ .dropBtn {
     box-shadow: rgb(187, 189, 194) 0px 0px 0px 3px;
 }
-#btn:checked ~ .subManu {
+#btnD:checked ~ .subManu {
     display: block;
 }
 .subManu > li:hover {
