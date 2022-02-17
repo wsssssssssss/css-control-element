@@ -15,14 +15,16 @@
       <legend>Accodion</legend>
       <div>
         <!-- 여기에 html -->
-        <!-- <input type="checkbox" id="box1">
-        <input type="checkbox" id="box2">
-        <input type="checkbox" id="box3"> -->
         <input type="radio" id="box1" name="accodion">
         <input type="radio" id="box2" name="accodion">
         <input type="radio" id="box3" name="accodion">
-
-        <label for="box1" class="item1">Accordion Item #1<span>^</span></label>
+        <input type="radio" id="toggle" name="accodion" checked>
+        <label for="toggle" class="toggle3"></label>
+        <div class="container1">
+          <label for="box1" class="on1"></label>
+          <label for="toggle" class="off1"></label>
+          <div class="item1">Accordion Item #1<span>^</span></div>
+        </div>
         <div class="content1">
           <span>This is the first item's accordion boxy.</span> It is shown by default, until the collapse plugin
           adds<br>
@@ -31,7 +33,11 @@
           custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
           can go within the <span>.accordion-body</span>, though the transition does limit overflow.
         </div>
-        <label for="box2" class="item2">Accordion Item #2<span>^</span></label>
+        <div class="container2">
+          <label for="box2" class="on2"></label>
+          <label for="toggle" class="off2"></label>
+          <div class="item2">Accordion Item #2<span>^</span></div>
+        </div>
         <div class="content2">
           <span>This is the second item's accordion boxy.</span> It is hidden by default, until the collapse plugin
           adds<br>
@@ -40,7 +46,11 @@
           custom CSS or overriding out default variables. It's also worth noting that just about any HTML<br>
           can go within the <span>.accordion-body</span>, though the transition does limit overflow.
         </div>
-        <label for="box3" class="item3">Accordion Item #3<span>^</span></label>
+        <div class="container3">
+          <label for="box3" class="on3"></label>
+          <label for="toggle" class="off3"></label>
+          <div class="item3">Accordion Item #3<span>^</span></div>
+        </div>
         <div class="content3">
           <span>This is the third item's accordion boxy.</span> It is hidden by default, until the collapse plugin
           adds<br>
@@ -170,7 +180,7 @@
         <div class="boxP">
           <input type="checkbox" id="toggleP">
           <label for="toggleP" class="toggleP">Launch demo modal</label>
-          <div class="fixed">
+          <label for="toggleP" class="fixed">
             <div class="modal">
               <div class="title">Modal title<label for="toggleP" class="closeBtn">X</label></div>
               <div class="line">
@@ -181,9 +191,8 @@
                 <label for="toggleP" class="save">Save changes</label>
               </div>
             </div>
-          </div>
+          </label>
         </div>
-      </div>
     </fieldset>
   </div>
 </body>
